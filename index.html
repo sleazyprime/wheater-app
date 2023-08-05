@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-yoOa5k1Qy6XQmgxSdvaGh8KmhjJS9BR8Eo6c1TrGGnHZ5li/FmyrB85hvjYJGICVdU9qyPVH5kg7D4JnJAMbA==" crossorigin="anonymous" referrerpolicy="no-referrer" />  
+    <link rel="icon" type="image/x-icon" href="icone.ico">
+</head>
+
+
+<body>
+    <div class="container">
+        <div class="left-column">
+            <div class="search-box">
+                <h1>Rentrer une ville</h1>
+                <input class="input" type="text" id="cityInput" placeholder="entrer une ville" onkeydown="handleKeyDown(event)">
+                <button onclick="getWeather()">chercher</button>
+            </div>
+            <div class="weather-box">
+                <h2 class="city-name" id="cityName"></h2>
+                <div class="weather-info" id="weatherInfo">
+                </div>
+                <div class="additional-info" id="additionalInfo">
+                </div>
+            </div>
+        </div>
+        <div class="right-column">
+            <div class="forecast" id="forecastInfo">
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

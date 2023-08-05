@@ -1,0 +1,113 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(5,0,91);
+    background: linear-gradient(90deg, rgba(5,0,91,1) 0%, rgba(1,158,193,1) 43%, rgba(1,159,194,1) 44%, rgba(0,212,255,1) 100%);
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    max-width: 1000px; 
+    flex-wrap: wrap; 
+    margin: 0 auto;
+}
+
+.weather-box, .right-column {
+    flex-basis: 50%;
+    display: none;
+    
+}
+
+.show {
+    display: block;
+}   
+
+.search-box {
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-bottom: 20px;
+}
+.search-box, .weather-box, .additional-info, .forecast {
+    background: rgb(250,119,2);
+    background: radial-gradient(circle, rgb(250, 200, 2) 0%, rgba(255,227,0,1) 100%);padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+
+h1, h2 {
+    margin-bottom: 20px;
+}
+
+input {
+    padding: 10px;
+    border: 1px solid rgb(202, 202, 96);
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    background: rgb(5,147,251);
+    background: radial-gradient(circle, rgba(5, 148, 251, 0.884) 0%, rgb(0, 145, 255) 100%);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.weather-info, .additional-info {
+    margin-top: 20px;
+}
+
+.weather-box,
+.right-column,
+.search-box,
+.forecast,
+.additional-info {
+    flex-basis: 48%; /* Répartir les boîtes en 48% de l'espace disponible */
+}
+/* Add other styles for different weather conditions if needed */
+
+.forecast {
+    text-align: left;
+}
+
+.forecast p {
+    margin: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.forecast img {
+    width: 30px;
+    height: 30px;
+    margin-right: 5px;
+}
+ .search-box:hover, .forecast:hover, .additional-info:hover  {
+    transform: scale(1.05);
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Afficher les éléments en colonne sur les écrans plus petits */
+    }
+    .weather-box,
+    .right-column,
+    .search-box,
+    .forecast,
+    .additional-info {
+        flex-basis: 100%; /* Occuper 100% de l'espace disponible sur les écrans plus petits */
+    }
+}
