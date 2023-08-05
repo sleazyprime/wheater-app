@@ -28,8 +28,6 @@ Cette application météo simple vous permet de rechercher la météo actuelle d
 ## Auteur
 [sleazyprime]
 
-N'hésitez pas à créer une section "Auteur" avec un lien vers votre site web ou votre profil GitHub pour que les utilisateurs puissent vous contacter ou en savoir plus sur vos projets.
-
 ## Licence
 Ce projet est sous licence [MIT].
 
